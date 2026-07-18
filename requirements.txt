@@ -1,0 +1,13 @@
+# Docling MCP server -- requirements
+# Install with:  pip install -r requirements.txt
+
+mcp[cli]>=1.2.0        # MCP Python SDK (FastMCP)
+docling                # conversion engine
+pypdf                  # PDF chunking (page split)
+python-docx             # DOCX chunking (block split)
+python-pptx             # PPTX chunking (slide split)
+pandas                 # table CSV export
+
+# Windows-only, needed for legacy .xls/.xlsb/.xlsm -> .xlsx pre-conversion
+# via Excel COM automation. Requires Excel to be installed on this machine.
+pywin32; sys_platform == "win32"
